@@ -11,6 +11,6 @@ class Spider < Animal
   end
 
   def speak
-    "Woof, woof"
+    "..."
   end
 end
