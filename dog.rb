@@ -9,4 +9,11 @@ class Dog < Animal
   def bring_a_stick
     "Here is your stick: ---------"
   end
+  
+  def speak
+    "..."
+  end
+
 end
+
+p dog = Dog.new('red')
