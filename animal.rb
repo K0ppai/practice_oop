@@ -1,7 +1,7 @@
 require_relative "remover"
 
 class Animal
-  attr_accessor :owner
+  attr_accessor :owner, :name
 
   def initialize(type, number_of_legs, name = "Unknown")
     @id = Random.rand(1..1000)
@@ -22,7 +22,6 @@ class Animal
     @number_of_legs
   end
 
-  attr_accessor :name
 
   def speak
     "grrrr"
@@ -33,4 +32,8 @@ class Animal
     @number_of_legs = remover.decrease(@number_of_legs)
   end
 
+  def owner=(owner)
+    @owner = owner
+    owner.animals.push(self) unless owner.animals.include?(self)
+  end
 end
