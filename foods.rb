@@ -10,3 +10,8 @@ class DogFood
   end
 end
 
+class SpiderFood
+  def is_liked?(food)
+   ["insect", "bug"].member?(food)
+  end
+end
