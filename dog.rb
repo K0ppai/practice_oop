@@ -13,7 +13,4 @@ class Dog < Animal
   def speak
     "Woof, woof"
   end
-
 end
-
-p dog = Dog.new('red')
